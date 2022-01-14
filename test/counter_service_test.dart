@@ -9,13 +9,17 @@ void main() {
     expect(_sut.counter, equals(3));
   });
 
-  test("Verify counter cannot be increased above max value", () {
+  test("Verify counter can be increased if below max value", () {
     final _sut = CounterService(maxCounterValue: 2);
     _sut.inc().inc();
     expect(_sut.counter, equals(2));
+  });
+
+  test("Verify counter cannot be increased above max value", () {
+    final _sut = CounterService(maxCounterValue: 0);
 
     _sut.inc();
-    expect(_sut.counter, equals(2));
+    expect(_sut.counter, equals(0));
   });
 
   test("Verify counter can be decreased", () {
@@ -43,14 +47,38 @@ void main() {
     expect(_sut.counter, equals(3));
   });
 
-  /*test("Verify counter can be increased asynchronously", () async {
+  test("Verify counter can be increased asynchronously", () async {
     final _sut = CounterService();
     await _sut.incAsync()
       ..incAsync()
       ..incAsync();
 
-    expect(_sut, isA<CounterService>());
-    expect(_sut.maxCounterValue, isNull);
-    expect(_sut.counter == 3, isTrue);
-  });*/
+    expect(_sut.counter, equals(3));
+  });
+
+  test("Some matcher examples", () {
+    // type check
+    expect(CounterService(), isA<CounterService>());
+
+    // null check
+    expect(null, isNull);
+    expect("null", isNotNull);
+
+    // bool check
+    expect(3 == 3, isTrue);
+    expect(3 != 3, isFalse);
+
+    // equality check
+    expect("1", equals("1"));
+
+    // sign check
+    expect(-1, isNegative);
+    expect(1, isPositive);
+    expect(0, isNonNegative);
+    expect(0, isNonPositive);
+
+    // list checks
+    expect([], isEmpty);
+    expect([2], isNotEmpty);
+  });
 }
