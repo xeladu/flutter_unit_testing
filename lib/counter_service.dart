@@ -19,13 +19,4 @@ class CounterService {
 
     return this;
   }
-
-  /// Increases the counter value if [maxCounterValue] has not been reached yet.
-  Future<CounterService> incAsync() async {
-    if (maxCounterValue == null || _counter < maxCounterValue!) _counter++;
-
-    await Future.delayed(const Duration(milliseconds: 250));
-
-    return this;
-  }
 }

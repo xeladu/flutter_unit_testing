@@ -3,15 +3,21 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test("Verify counter can be increased", () {
+    // Arrange
     final _sut = CounterService();
+
+    // Act
     _sut.inc().inc().inc();
 
+    // Assert
     expect(_sut.counter, equals(3));
   });
 
   test("Verify counter can be increased if below max value", () {
     final _sut = CounterService(maxCounterValue: 2);
+
     _sut.inc().inc();
+
     expect(_sut.counter, equals(2));
   });
 
@@ -19,6 +25,7 @@ void main() {
     final _sut = CounterService(maxCounterValue: 0);
 
     _sut.inc();
+
     expect(_sut.counter, equals(0));
   });
 
@@ -28,6 +35,7 @@ void main() {
     expect(_sut.counter, equals(3));
 
     _sut.dec();
+
     expect(_sut.counter, equals(2));
   });
 
@@ -35,25 +43,8 @@ void main() {
     final _sut = CounterService();
 
     _sut.dec();
+
     expect(_sut.counter, equals(0));
-  });
-
-  test("Verify counter can be increased asynchronously", () async {
-    final _sut = CounterService();
-    await _sut.incAsync()
-      ..incAsync()
-      ..incAsync();
-
-    expect(_sut.counter, equals(3));
-  });
-
-  test("Verify counter can be increased asynchronously", () async {
-    final _sut = CounterService();
-    await _sut.incAsync()
-      ..incAsync()
-      ..incAsync();
-
-    expect(_sut.counter, equals(3));
   });
 
   test("Some matcher examples", () {
