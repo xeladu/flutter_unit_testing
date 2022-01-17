@@ -1,16 +1,13 @@
-# demo
+This repo contains files that are part of the post at [Flutter Unit Test Basics - xeladu.medium.com](https://xeladu.medium.com/flutter-unit-test-basics-a8c6815f7712).
 
-A new Flutter project.
+# Content
 
-## Getting Started
+The repository contains a sample Flutter project with an additional class [counter_service.dart](https://github.com/xeladu/flutter_unit_testing/blob/main/lib/counter_service.dart) and its corresponding test class [counter_service_test.dart](https://github.com/xeladu/flutter_unit_testing/blob/main/test/counter_service_test.dart) to give a short introduction about unit testing in a Flutter application.
 
-This project is a starting point for a Flutter application.
+# Support
 
-A few resources to get you started if this is your first Flutter project:
+If you like this post or my work in general, feel free to support me in any way ❤
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- You can [buy me a coffee](https://www.buymeacoffee.com/xeladu) ☕
+- You can [donate via PayPal](https://www.paypal.com/donate/?hosted_button_id=JPWK39GGPAAFQ) 🎁
+- You can [engage in the discussion](https://xeladu.medium.com) 📣
