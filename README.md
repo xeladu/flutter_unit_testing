@@ -1,4 +1,7 @@
-This repo contains files that are part of the post at [Flutter Unit Test Basics - xeladu.medium.com](https://xeladu.medium.com/flutter-unit-test-basics-a8c6815f7712).
+# Sources
+
+[Flutter Unit Test Basics on QuickCoder](https://quickcoder.org/flutter-testing/)<br />
+[Flutter Unit Test Basics on Medium](https://xeladu.medium.com/flutter-unit-test-basics-a8c6815f7712)
 
 If you want to dive deep into testing Flutter applications, check out 📙 [my free ebook](https://xeladu.gumroad.com/l/ftg) with many more details!
 
